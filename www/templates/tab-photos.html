@@ -1,0 +1,14 @@
+<ion-view view-title="Photos">
+  <ion-content>
+
+    <div class="catbook-photos">
+
+      <img class="catbook-photo"
+           ng-repeat="img in Photos.photos"
+           ng-src="{{ img.url }}"
+           alt="">
+
+    </div>
+
+  </ion-content>
+</ion-view>

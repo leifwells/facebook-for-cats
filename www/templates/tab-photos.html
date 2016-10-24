@@ -2,12 +2,31 @@
   <ion-content>
 
     <div class="catbook-photos">
+      <div class="row" 
+           ng-repeat="photo in Photos.photos"
+           ng-if="$index % 4 === 0">
 
-      <img class="catbook-photo"
-           ng-repeat="img in Photos.photos"
-           ng-src="{{ img.url }}"
-           alt="">
+        <div class="col-25 catbook-photo"
+             ng-if="$index < Photos.photos.length"
+             ng-style="{'backgroundImage': 'url({{ Photos.photos[$index].url }})'}">
 
+        </div>
+        <div class="col-25 catbook-photo"
+             ng-if="$index < Photos.photos.length"
+             ng-style="{'backgroundImage': 'url({{ Photos.photos[$index + 1].url }})'}">
+
+        </div>
+        <div class="col-25 catbook-photo"
+             ng-if="$index < Photos.photos.length"
+             ng-style="{'backgroundImage': 'url({{ Photos.photos[$index + 2].url }})'}">
+
+        </div>
+        <div class="col-25 catbook-photo"
+             ng-if="$index < Photos.photos.length"
+             ng-style="{'backgroundImage': 'url({{ Photos.photos[$index + 3].url }})'}">
+
+        </div>
+      </div>
     </div>
 
   </ion-content>

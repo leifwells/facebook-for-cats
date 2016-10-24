@@ -5,7 +5,7 @@
       <div class="item item-avatar">
         <img ng-src="{{ article.authorImg }}">
         <h2>{{ article.author }}</h2>
-        <p>{{ article.date }}</p>
+        <p>{{ article.date | date: 'fullDate' }}</p>
       </div>
 
       <div class="item item-body">
@@ -14,8 +14,8 @@
           {{ article.body }}
         </p>
         <p>
-          <a href="#" class="subdued">{{ article.likes }} Like</a>
-          <a href="#" class="subdued">5 Comments</a>
+          <a href="#" class="subdued">{{ article.likes }} {{ article.likes > 1 ? 'Likes' : 'Like' }}</a>
+          <a href="#" class="subdued">{{ article.comments }} Comments</a>
         </p>
       </div>
 

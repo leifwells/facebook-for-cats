@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('NewsCtrl', function(News) {
   var vm = this;
   
-  vm.articles = News.getNews()
+  vm.articles = News.getNews();
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {

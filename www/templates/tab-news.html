@@ -15,7 +15,7 @@
         </p>
         <p>
           <a href="#" class="subdued">{{ article.likes }} {{ article.likes > 1 ? 'Likes' : 'Like' }}</a>
-          <a href="#" class="subdued">{{ article.comments }} Comments</a>
+          <a href="#" class="subdued">{{ article.comments }} {{ article.comments === 1 ? 'Comment' : 'Comments' }}</a>
         </p>
       </div>
 

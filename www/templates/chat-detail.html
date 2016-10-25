@@ -6,22 +6,35 @@
 -->
 <ion-view view-title="{{chat.name}}">
   <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.body}}
-    </p>
-    <div>
+    <div class="row chat-detail-message-holder">
+      <div class="col-20">
+        <img ng-src="{{chat.face}}"
+             class="chat-detail-avatar">
+      </div>
+      <div class="col-80 chat-detail-message">
+        <p>
+          {{chat.body}}
+        </p>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <label>Post a reply:</label>
+    </div>
+    <div class="row">
       <textarea ng-model="$parent.replyText" 
                 class="reply-textarea"
                 minlength="1" 
                 maxlength="100"
                 rows="4"></textarea>
     </div>
-    <div class="post-error-holder">
+    <div class=" row post-error-holder">
       <p class="post-error"
          ng-if="postError">ERROR: Cats Rule, Dogs Drool!</p>
     </div>
+    <div class="row">
     <button class="button button-block button-positive"
             ng-click="postReply()">Reply</button>
+    </div>
   </ion-content>
 </ion-view>

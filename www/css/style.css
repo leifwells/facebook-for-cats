@@ -13,8 +13,25 @@
     border: 1px solid white;
 }
 
+@media only screen
+    and (min-device-width: 768px) {
+        .catbook-photo {
+            height: 200px;
+        }
+    }
+
 .chat-unread {
     font-weight: bolder;
+}
+
+.chat-detail-avatar {
+     width: 64px; 
+     height: 64px;
+
+}
+
+.chat-detail-message-holder {
+    padding-bottom: 25px;
 }
 
 .reply-textarea {

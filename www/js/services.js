@@ -37,8 +37,6 @@ angular.module('starter.services', [])
 
     function post( text ) {
       var req = {
-        method: 'POST',
-        url: 'https://facebook-for-cats-api.herokuapp.com/echoThePost',
         headers: {
           'Content-Type': 'application/json',
           'catbook-apikey': 'catbook123secretapikey'

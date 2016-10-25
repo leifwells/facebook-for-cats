@@ -34,6 +34,10 @@
     padding-bottom: 25px;
 }
 
+.chat-detail-message {
+    padding-left: 15px;
+}
+
 .reply-textarea {
     width: 100%;
     border: 1px solid #DDD;

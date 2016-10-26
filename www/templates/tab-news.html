@@ -14,7 +14,7 @@
           {{ article.body }}
         </p>
         <p>
-          <a href="#" class="subdued">{{ article.likes }} {{ article.likes > 1 ? 'Likes' : 'Like' }}</a>
+          <a href="#" class="subdued">{{ article.likes }} {{ article.likes === 1 ? 'Like' : 'Likes' }}</a>
           <a href="#" class="subdued">{{ article.comments }} {{ article.comments === 1 ? 'Comment' : 'Comments' }}</a>
         </p>
       </div>
